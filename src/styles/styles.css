@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+    --font-inter: "Inter", "sans-serif"; 
+    --font-dm-serif: "DM Serif Display","serif";
+    --font-weight-thin: 200;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 17px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cecece80;
+    border:3px solid white;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cececee7;
+}
