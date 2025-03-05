@@ -1,24 +1,32 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios';
+ import { useQuery } from '@apollo/client'
+ import { GET_BLOGS } from '../../queries/getBlogs'
+import { useEffect } from 'react';
 
 const Section = () => {
 
-    const [posts, setPosts] = useState<any[]>()
+    const { data } = useQuery(GET_BLOGS);
+
 
     useEffect(()=>{
-        axios.get('https://jacobmoya.com/cms/wp-json/wp/v2/posts')
-        .then(response => setPosts(response.data))
-        .catch(error => console.error(error));
-    },[])
-
+        data ? console.log(data) : '';
+    },[data])
+    
     return (
-    <section className='w-dvw min-h-dvh flex items-center justify-center flex-col'>
-       {posts? posts.map((item)=>(
-        <>
-            <h1> {item.title.rendered} </h1>
-            <p dangerouslySetInnerHTML={{__html:item.content.rendered}}></p>
+    <section className='w-dvw min-h-dvh flex items-center justify-center flex-col '>
+        <> 
+            {
+                data ? data.posts.nodes.map((item:any) => {
+                    <>
+                        <h1>{item.title}</h1>
+                        <p>{item.title}</p>
+                    </>
+                }) :    
+                <>
+                    <h1>Loading</h1>
+                    <p>... ...  </p>
+                </>
+            }
         </>
-       )) : null}
     </section>
     )
 }

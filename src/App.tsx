@@ -1,7 +1,8 @@
 // import { useState } from "react"
 
-import Header from "./components/layout/Header"
-import Section from "./components/layout/Section"
+
+import Header from './components/Layout/Header'
+import Section from './components/Layout/Section'
 
 function App() {
 
