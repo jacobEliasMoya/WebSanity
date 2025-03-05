@@ -64,7 +64,7 @@ const Header = () => {
       <img src={logo} alt="" className='shadow-md shadow-neutral-300 rounded-full' />
       <ul className={`flex justify-end items-center gap-4 w-3/5 px-8 h-full`}>
         { navigationElms?.map((item)=>(
-          <li key={`nav-${item.id}`} className="first:text-red-300 first:font-normal last:text-yellow-200 last:w-2 last:h-2 last:bg-blue-300 last:rounded-full p-4 relative after:absolute after:bottom-0 after:h-2  after:left-0 after:w-full hover:after:h-full after:transition-all after:-z-10 z-10 flex flex-row gap-2 items-center justify-center">
+          <li key={`nav-${item.id}`} className="first:text-neutral-700 first:font-normal last:text-yellow-200 last:w-2 last:h-2 last:bg-blue-300 last:rounded-full p-4 relative after:absolute after:bottom-0 after:h-2  after:left-0 after:w-full hover:after:h-full after:transition-all after:-z-10 z-10 flex flex-row gap-2 items-center justify-center">
             <a aria-label={item.title} href={item.url} target={item.target ? item.target : '' } className=""> {item.title} {item.icon} </a>
           </li>
         )) }  
