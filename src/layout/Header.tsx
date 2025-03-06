@@ -1,7 +1,7 @@
 import { HiCode, HiHome, HiQuestionMarkCircle } from 'react-icons/hi'
 import { HiComputerDesktop } from 'react-icons/hi2'
 import { useEffect, useState } from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../assets/logo.png'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Header = () => {
