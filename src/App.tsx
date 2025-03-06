@@ -1,5 +1,6 @@
-import Header from "./components/layout/Header"
-import Section from "./components/layout/Section"
+import Header from './layout/Header'
+import Section from './layout/Section'
+
 
 function App() {
 

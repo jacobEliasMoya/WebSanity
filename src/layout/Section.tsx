@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client'
-import { BlogInterface, GET_BLOGS } from '../../queries/getBlogs'
+import { BlogInterface, GET_BLOGS } from '../queries/getBlogs'
 import { useEffect, useState } from 'react';
 
 const Section = () => {
