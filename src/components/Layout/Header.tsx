@@ -1,17 +1,20 @@
-import { useEffect, useState } from 'react'
-import { Nav } from '../../types/navigation'
+import { HiCode, HiDeviceMobile, HiHome, HiQuestionMarkCircle } from 'react-icons/hi'
+import { HiComputerDesktop } from 'react-icons/hi2'
 import { MdLightMode } from 'react-icons/md'
+import { useEffect, useState } from 'react'
 import logo from '../../assets/logo.png'
+import { PiHamburger } from 'react-icons/pi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Header = () => {
 
-  const initialNav:Array<Nav> = [
+  const initialNav:Array<any> = [
     {
       id: 0,
       name: 'Home',
       url: '/',
       title: 'Home',
-      icon: undefined,
+      icon: <HiHome/>,
       target: undefined,
       additionalClasses: ''
     },
@@ -19,7 +22,7 @@ const Header = () => {
       name: ' Services',
       url: '/',
       title: ' Services',
-      icon: undefined,
+      icon: <HiComputerDesktop/>,
       target: undefined,
       additionalClasses: '',
       id: 1
@@ -28,7 +31,7 @@ const Header = () => {
       name: ' Portfolio',
       url: '/',
       title: ' Portfolio',
-      icon: undefined,
+      icon: <HiCode/>,
       target: undefined,
       additionalClasses: '',
       id: 2
@@ -37,35 +40,38 @@ const Header = () => {
       name: 'About',
       url: '/',
       title: 'About',
-      icon: undefined,
+      icon: <HiQuestionMarkCircle/>,
       target: undefined,
       additionalClasses: '',
       id: 3
     },
     {
-      name: 'Dark Mode',
+      name: 'Mobile',
       url: '/',
       title: '',
-      icon: <MdLightMode />,
+      icon: <GiHamburgerMenu />,
       target: undefined,
-      additionalClasses: '',
+      additionalClasses: '!block lg:!hidden',
       id: 4
     },
   ]
 
-  const [navigationElms,setNavigationElms] = useState<Nav[]>();
+  const [navigationElms,setNavigationElms] = useState<any[]>();
 
   useEffect(()=>{
     initialNav ? setNavigationElms(initialNav) : '';
   },[])
 
   return (
-    <header className=" shadow-lg shadow-neutral-300 sticky top-0 w-[97%] mx-auto rounded-full bg-neutral-100 text-neutral-950 font-inter font-thin text-xl mt-8 flex justify-between items-center p-2">
-      <img src={logo} alt="" className='shadow-md shadow-neutral-300 rounded-full' />
-      <ul className={`flex justify-end items-center gap-4 w-3/5 px-8 h-full`}>
+    <header className=" shadow-sm shadow-neutral-300 sticky top-0 w-full mx-auto rounded-full bg-neutral-100 text-neutral-950 font-inter font-thin text-xl flex justify-between items-center p-2 h-17">
+      <img src={logo} alt="" className='shadow-md shadow-neutral-300 rounded-full h-15' />
+      <ul className={`flex justify-end items-center gap-2 md:gap-4 w-3/5 px-4 h-full`}>
         { navigationElms?.map((item)=>(
-          <li key={`nav-${item.id}`} className="first:text-neutral-700 first:font-normal last:text-yellow-200 last:w-2 last:h-2 last:bg-blue-300 last:rounded-full p-4 relative after:absolute after:bottom-0 after:h-2  after:left-0 after:w-full hover:after:h-full after:transition-all after:-z-10 z-10 flex flex-row gap-2 items-center justify-center">
-            <a aria-label={item.title} href={item.url} target={item.target ? item.target : '' } className=""> {item.title} {item.icon} </a>
+          <li key={`nav-${item.id}`} className="first:text-neutral-700 first:font-normal p-2 md:p-4 relative after:absolute after:bottom-0 after:h-2  after:left-0 after:w-full hover:after:h-full after:transition-all after:-z-10 z-10 flex flex-row gap-2 items-center justify-center">
+            <a aria-label={item.title} href={item.url} target={item.target ? item.target : '' } className=""> 
+              <span className="hidden lg:block">{item.title}</span> 
+              <span className={`hidden md:block lg:hidden text-neutral-950 ${item.additionalClasses}`}>{item.icon}</span> 
+            </a>
           </li>
         )) }  
       </ul>
@@ -73,4 +79,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header 

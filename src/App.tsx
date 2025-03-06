@@ -1,8 +1,5 @@
-// import { useState } from "react"
-
-
-import Header from './components/Layout/Header'
-import Section from './components/Layout/Section'
+import Header from "./components/layout/Header"
+import Section from "./components/layout/Section"
 
 function App() {
 
@@ -13,7 +10,7 @@ function App() {
   // }
 
   return (
-    <main className="bg-white min-h-dvh">
+    <main className="bg-white min-h-dvh container mx-auto grid grid-cols-1 gap-8 py-8 p-4">
       <Header/>
       <Section/>
     </main>
