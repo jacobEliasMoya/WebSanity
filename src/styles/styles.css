@@ -6,11 +6,7 @@
     --font-weight-thin: 200;
 }
 
-
-.blog-wrap{
-    @apply w-full bg-neutral-100 rounded-4xl shadow-sm shadow-neutral-400 grid grid-cols-1 md:grid-cols-2 items-start justify-center p-8 gap-4 md:gap-8
-}
-
+ 
 /* width */
 ::-webkit-scrollbar {
     width: 17px;
@@ -23,12 +19,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #cecece80;
+    background: #312c85;
     border:3px solid white;
     border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #cececee7;
+    background: #312c85e7;
 }
