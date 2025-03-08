@@ -11,7 +11,7 @@ function App() {
   // }
 
   return (
-    <main className=" min-h-dvh container mx-auto grid grid-cols-1 gap-8 py-8 p-4">
+    <main className=" min-h-dvh container mx-auto grid grid-cols-1 gap-4 md:gap-8 py-8 p-4">
       <Header/>
       <Section/>
     </main>

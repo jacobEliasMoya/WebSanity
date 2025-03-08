@@ -2,7 +2,7 @@ import { HiCode, HiHome, HiQuestionMarkCircle } from 'react-icons/hi'
 import { HiComputerDesktop } from 'react-icons/hi2'
 import { useEffect, useState } from 'react'
 import logo from '../assets/logo.png'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import Socials from '../components/Socials'
 
 const Header = () => {
 
@@ -42,16 +42,7 @@ const Header = () => {
       target: undefined,
       additionalClasses: '',
       id: 3
-    },
-    {
-      name: 'Mobile',
-      url: '/',
-      title: '',
-      icon: <GiHamburgerMenu />,
-      target: undefined,
-      additionalClasses: '!block lg:!hidden',
-      id: 4
-    },
+    }
   ]
 
   const [navigationElms,setNavigationElms] = useState<any[]>();
@@ -61,18 +52,26 @@ const Header = () => {
   },[])
 
   return (
-    <header className=" sticky top-0 w-full mx-auto rounded-full bg-white text-indigo-950 font-dm-serif text-xl flex justify-between items-center p-2 h-17">
-      <img src={logo} alt="" className=' rounded-full h-15' />
-      <ul className={`flex justify-end items-center gap-2 md:gap-4 w-3/5 px-4 h-full`}>
-        { navigationElms?.map((item)=>(
-          <li key={`nav-${item.id}`} className="first:text-indigo-700 first:font-normal p-2 md:p-4 relative after:absolute after:bottom-0 after:h-2  after:left-0 after:w-full hover:after:h-full after:transition-all after:-z-10 z-10 flex flex-row gap-2 items-center justify-center">
-            <a aria-label={item.title} href={item.url} target={item.target ? item.target : '' } className=""> 
-              <span className="hidden lg:block ">{item.title}</span> 
-              <span className={`hidden md:block lg:hidden ${item.additionalClasses}`}>{item.icon}</span> 
-            </a>
-          </li>
-        )) }  
-      </ul>
+    <header className=" sticky top-0 w-full mx-auto bg-neutral-950/00  backdrop-blur-lg border-2 border-red-500 filter text-indigo-950 font-dm-serif text-lg grid grid-cols-1 ">
+      <div className="grid grid-cols-3 gap-8 ">
+       
+        <ul className={`hidden md:grid grid-cols-4 h-full`}>
+          { navigationElms?.map((item)=>(
+            <li key={`nav-${item.id}`} className="first:text-black first:bg-red-500 text-white first:font-normal relative after:absolute after:bottom-0 after:h-2  after:left-0 after:w-full hover:after:h-full after:transition-all after:-z-10 z-10 flex flex-row gap-2 items-center justify-center border-2 border-y-0 border-red-500 border-r-0 first:border-l-0 last:border-r-2 hover:bg-red-500 hover:text-neutral-950">
+              <a aria-label={item.title} href={item.url} target={item.target ? item.target : '' } className="w-full h-full flex items-center justify-center"> 
+                <span className="hidden lg:block ">{item.title}</span> 
+                <span className={`hidden md:block lg:hidden ${item.additionalClasses}`}>{item.icon}</span> 
+              </a>
+            </li>
+          )) }  
+        </ul>
+
+        <div className="w-full h-full flex items-center justify-center p-2 lg:p-4 border-r-2 border-red-500 md:border-r-0"> 
+          <a href='/' className='w-max h-max '>  <img src={logo} alt="" className='h-15 hover:scale-105' /></a>  
+        </div>
+
+        <Socials additionalClasses={''}/>
+      </div>
     </header>
   )
 }
