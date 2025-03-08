@@ -52,7 +52,7 @@ const Header = () => {
   },[])
 
   return (
-    <header className=" sticky top-0 w-full mx-auto bg-neutral-950/00  backdrop-blur-lg border-2 border-red-500 filter text-indigo-950 font-dm-serif text-lg grid grid-cols-1 h-30">
+    <header className=" rounded-xl overflow-hidden sticky top-0 w-full mx-auto bg-neutral-950/00  backdrop-blur-lg border-2 border-red-500 filter text-indigo-950 font-dm-serif text-lg grid grid-cols-1 h-30">
       <div className="grid grid-cols-3 gap-8 ">
        
         <ul className={`hidden md:grid grid-cols-4 h-full`}>
