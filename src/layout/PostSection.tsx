@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client'
 import { BlogInterface, GET_BLOGS } from '../queries/getBlogs'
 import { useEffect, useState } from 'react';
 
-const Section = () => {
+const PostSection = () => {
 
     const { data, loading, error } = useQuery(GET_BLOGS);
     const [postData, getPostData] = useState<BlogInterface | null>(null);
@@ -29,4 +29,4 @@ const Section = () => {
     )
 }
 
-export default Section
+export default PostSection

@@ -52,8 +52,8 @@ const Header = () => {
   },[])
 
   return (
-    <header className=" rounded-xl overflow-hidden sticky top-0 w-full mx-auto bg-neutral-950/00  backdrop-blur-lg border-2 border-red-500 filter text-indigo-950 font-dm-serif text-lg grid grid-cols-1 h-30">
-      <div className="grid grid-cols-3 gap-8 ">
+    <header className=" overflow-hidden sticky top-0 w-full mx-auto bg-neutral-950/70  backdrop-blur-lg border-b-2 border-red-500 filter text-indigo-950 font-dm-serif text-lg grid grid-cols-1 h-20 md:h-30">
+      <div className="grid grid-cols-3 ">
        
         <ul className={`hidden md:grid grid-cols-4 h-full`}>
           { navigationElms?.map((item)=>(
@@ -66,8 +66,8 @@ const Header = () => {
           )) }  
         </ul>
 
-        <div className="w-full h-full flex items-center justify-center p-2 lg:p-4 border-r-2 border-red-500 md:border-r-0"> 
-          <a href='/' className='w-max h-max '>  <img src={logo} alt="" className='h-15 hover:scale-105' /></a>  
+        <div className="w-full h-full flex items-center justify-center border-r-2 border-red-500 md:border-r-0 group"> 
+          <a href='/' className='w-full flex items-center justify-center h-full group-hover:bg-red-500'>  <img src={logo} alt="" className='h-10 md:h-15 w-auto group-hover:scale-110' /></a>  
         </div>
 
         <Socials additionalClasses={''}/>

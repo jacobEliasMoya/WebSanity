@@ -1,5 +1,5 @@
 import Header from './layout/Header'
-import Section from './layout/Section'
+import Section from './layout/PostSection'
 
 
 function App() {
@@ -11,9 +11,11 @@ function App() {
   // }
 
   return (
-    <main className=" min-h-dvh container mx-auto grid grid-cols-1 gap-4 md:gap-8 py-8 p-4">
+    <main className=" min-h-dvh w-full grid grid-cols-1 gap-4 md:gap-8 ">
       <Header/>
-      <Section/>
+      <div className="w-full md:w-10/12 mx-auto pb-8 px-4 ">
+        <Section/>
+      </div>
     </main>
   )
 }

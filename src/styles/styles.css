@@ -5,7 +5,6 @@
     --font-dm-serif: "DM Serif Display","serif";
     --font-weight-thin: 200;
 }
-
  
 /* width */
 ::-webkit-scrollbar {
@@ -15,15 +14,16 @@
 /* Track */
 ::-webkit-scrollbar-track {
     background: black;
+    border-left:2px solid #fb2c36;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: black;
-    border:2px solid white;
+    background: #fb2c36;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: black;
+    background: #fb2c3699;
+    cursor:pointer;
 }
