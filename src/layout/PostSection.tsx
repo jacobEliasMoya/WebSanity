@@ -20,8 +20,15 @@ const PostSection = () => {
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-center gap-4 md:gap-8">
                 {postData?.posts.nodes.map((item)=>(
                     <div className=' flex flex-col gap-4 md:gap-8 w-full h-full overflow-hidden '>
-                        <h1 className='rounded-xl w-full text-lg lg:text-2xl p-8 text-white font-dm-serif bg-black  tracking-wide leading-none border-2 border-red-500 h-40 lg:min-h-30 flex items-center justify-center text-center text-balance'>{item.title}</h1>
-                        <div className='w-full rounded-xl flex border-2 border-red-500 text-white flex-col gap-4 font-inter p-8 h-full' dangerouslySetInnerHTML={{__html:item.content}} />
+                        <div className='w-full rounded-xl flex  border-2 border-blue-600 text-white flex-col gap-4 font-inter p-8 min-h-80' style={{
+                            backgroundImage: `url(${item.featuredImage.node.sourceUrl})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }}></div>
+
+                        <h1 className='rounded-xl w-full text-lg lg:text-2xl p-8 text-black tracking-wide font-dm-serif tracking-wide leading-none bg-blue-600 font-black h-40 lg:min-h-30 flex items-center justify-center text-center text-balance'>{item.title}</h1>
+                        
+                        <div className='w-full rounded-xl flex border-2 border-blue-600 text-white flex-col gap-4 font-inter p-8 h-full' dangerouslySetInnerHTML={{__html:item.content}} />
                     </div>
                 ))}
             </div>
