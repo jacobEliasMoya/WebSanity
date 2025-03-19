@@ -4,14 +4,12 @@ import { useEffect, useState } from 'react';
 
 const PostSection = () => {
 
-    const loadingCount = 9
-
     const { data, loading, error } = useQuery(GET_BLOGS);
     const [postData, getPostData] = useState<BlogInterface | null>(null);
 
     useEffect(()=>{
         getPostData(data)
-    }),[]
+    }),[data]
 
     if (error) return; 
 
