@@ -1,21 +1,21 @@
+import BannerImage from './layout/BannerImage'
 import Header from './layout/Header'
-import Section from './layout/PostSection'
-
+import PostSection from './layout/PostSection'
+import blackBG from './assets/black organic shed background.webp'
+import RandomQuote from './layout/RandomQuote'
 
 function App() {
 
-  // const [isDark,setIsDark] = useState<boolean>(false)
-
-  // const handleDarkMode = () => {
-  //   setIsDark(prev=> !prev)
-  // }
-
   return (
-    <main className=" min-h-dvh w-full grid grid-cols-1 gap-4 md:gap-8 lg:gap-16 ">
+    <main className=" min-h-dvh w-full flex items-start flex-col">
       <Header/>
-      <div className="w-full md:w-10/12 mx-auto pb-8 px-4 ">
-        <Section/>
+      <BannerImage bgImage={blackBG} bannerText={'Jakespace'} />
+      
+      <div className="w-full lg:w-10/12 mx-auto p-8 lg:pt-18">
+        <PostSection/>
       </div>
+
+      <RandomQuote/>
     </main>
   )
 }

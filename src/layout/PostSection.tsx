@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 const PostSection = () => {
 
+    const loadingCount = 9
+
     const { data, loading, error } = useQuery(GET_BLOGS);
     const [postData, getPostData] = useState<BlogInterface | null>(null);
 
@@ -20,7 +22,7 @@ const PostSection = () => {
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-center gap-4 md:gap-8">
                 {postData?.posts.nodes.map((item)=>(
                     <div className=' flex flex-col gap-4 md:gap-8 w-full h-full overflow-hidden '>
-                        <div className='w-full rounded-xl flex flex-col gap-4 font-inter p-8 min-h-80' style={{
+                        <div className='w-full rounded-xl flex flex-col gap-4 font-inter p-8 h-40 md:h-80' style={{
                             backgroundImage: `url(${item.featuredImage.node.sourceUrl})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center'
