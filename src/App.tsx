@@ -11,7 +11,7 @@ function App() {
   // }
 
   return (
-    <main className=" min-h-dvh w-full grid grid-cols-1 gap-4 md:gap-8 ">
+    <main className=" min-h-dvh w-full grid grid-cols-1 gap-4 md:gap-8 lg:gap-16 ">
       <Header/>
       <div className="w-full md:w-10/12 mx-auto pb-8 px-4 ">
         <Section/>

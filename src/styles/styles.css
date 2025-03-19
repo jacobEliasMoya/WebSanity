@@ -13,17 +13,17 @@
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: black;
-    border-left:2px solid #155dfc;
+    background: #fff;
+    border-left:2px solid #000;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #155dfc;
+    background: #000;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #155dfc99;
+    background: #00099;
     cursor:pointer;
 }
