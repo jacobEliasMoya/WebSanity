@@ -8,7 +8,7 @@ const RandomQuote = () => {
     const [quote,setQuote] = useState<QuoteInterface >()
 
     useEffect(()=>{
-        axios.get('https://api.quotable.io/random')
+        axios.get('http://api.quotable.io/random')
         .then(response=>{
             setQuote(response.data)
         })
