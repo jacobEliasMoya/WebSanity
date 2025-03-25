@@ -3,8 +3,13 @@ import { HiComputerDesktop } from 'react-icons/hi2'
 import { useEffect, useState } from 'react'
 import logo from '../assets/logo.png'
 import Socials from '../components/Socials'
+import { useQuery } from '@apollo/client'
+import { GET_MAIN_NAV } from '../queries/getMainNav'
+
 
 const Header = () => {
+
+  const { data, loading, error} = useQuery(GET_MAIN_NAV);
 
   const initialNav:Array<any> = [
     {
@@ -50,6 +55,13 @@ const Header = () => {
   useEffect(()=>{
     initialNav ? setNavigationElms(initialNav) : '';
   },[])
+
+    useEffect(()=>{
+      console.log(data)
+  }),[data]
+
+  if(loading) return;
+  if(error) return;
 
   return (
     <header className="z-11 overflow-hidden sticky top-0 w-full mx-auto bg-white/80  backdrop-blur-lg border-b-2 border-black filter font-dm-serif text-lg grid grid-cols-1 h-20 ">
