@@ -7,7 +7,7 @@ const Header = () => {
 
 
   return (
-    <header className="z-11 overflow-hidden sticky top-0 w-full mx-auto bg-white/80  backdrop-blur-lg border-b-2 border-black filter font-dm-serif text-lg grid grid-cols-1 h-20 ">
+    <header className="z-11 overflow-hidden sticky top-0 w-full mx-auto bg-white/80  backdrop-blur-lg border-b-1 border-black filter font-dm-serif text-lg grid grid-cols-1 h-20 ">
       <div className="grid grid-cols-3 ">
        
         <MainNavigation/>

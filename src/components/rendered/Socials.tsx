@@ -66,7 +66,7 @@ const Socials = (props: Props) => {
     return (
         <div className="w-full   first:font-normal   relative after:absolute after:bottom-0 after:h-2  after:left-0 after:w-full hover:after:h-full after:transition-all after:-z-10 z-10 grid lg:grid-cols-4 text-3xl col-start-3">
             {socialElms ? socialElms.map((item)=>(
-                <a key={item.id} href={item.url} title={item.title} target={item.target} className={`hover:bg-neutral-300  p-4 px-8 border-l-2 last:border-r-0
+                <a key={item.id} href={item.url} title={item.title} target={item.target} className={`hover:bg-neutral-300  p-4 px-8 border-l-1 last:border-r-0
                  h-full hover:text-4xl items-center justify-center flex ${item.desktopHidden ? 'lg:hidden' : 'hidden lg:flex'}`} aria-label={item.title} >
                     {item.icon}
                 </a>
