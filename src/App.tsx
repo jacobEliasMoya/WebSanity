@@ -1,8 +1,8 @@
 import BannerImage from './layout/BannerImage'
-import Header from './layout/Header'
 import PostSection from './layout/PostSection'
 import blackBG from './assets/black organic shed background.webp'
 import RandomQuote from './layout/RandomQuote'
+import Header from './layout/Header'
 
 function App() {
 

@@ -6,35 +6,32 @@ export const GET_MAIN_NAV = gql `
             menuId
             name
             menuItems {
-            nodes {
-                id
-                label
-            }
+                nodes {
+                    id
+                    label
+                }
             }
         }
     }
 `
 
+export interface MainNavMenu {
+    menu:NavMenu
+}
 
-// {
-//     "menu": {
-//         "__typename": "Menu",
-//         "menuId": 18,
-//         "name": "main-menu",
-//         "menuItems": {
-//             "__typename": "MenuToMenuItemConnection",
-//             "nodes": [
-//                 {
-//                     "__typename": "MenuItem",
-//                     "id": "cG9zdDo2Mg==",
-//                     "label": "Animal Facts"
-//                 },
-//                 {
-//                     "__typename": "MenuItem",
-//                     "id": "cG9zdDo2Mw==",
-//                     "label": "Dev Thoughts"
-//                 }
-//             ]
-//         }
-//     }
-// }
+export interface NavMenu {
+    menuId : number,
+    menuItems: {
+        nodes: MenuItems[]
+    },
+    name:string,
+    _typename:string
+}
+
+export interface MenuItems{
+    id:string,
+    label:string,
+    _typename: string   
+}
+
+

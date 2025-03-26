@@ -5,7 +5,25 @@
     --font-dm-serif: "DM Serif Display","serif";
     --font-weight-thin: 200;
 }
- 
+
+.animate-gradient  {
+    animation: loadingAnimation 3s linear infinite
+}
+
+@keyframes loadingAnimation {
+    0% {
+        backgruond-position: 0% 50%;
+    }
+    50% {
+        backgruond-position: 100% 50%;
+
+    }
+    100%{
+        backgruond-position: 0% 50%;
+
+    }
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 17px;

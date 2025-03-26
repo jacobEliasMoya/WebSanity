@@ -2,7 +2,7 @@ import { FaLinkedin } from "react-icons/fa6"
 import { FaEnvelope, FaGithub,  FaMobile } from "react-icons/fa"
 import { useEffect, useState } from "react"
 import { GiHamburgerMenu } from "react-icons/gi"
-import { SocialTypes } from "../types/socialTypes"
+import { SocialTypes } from "../../types/socialTypes"
 
 type Props = {
     additionalClasses:string 

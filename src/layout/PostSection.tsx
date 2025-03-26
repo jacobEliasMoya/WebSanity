@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client'
 import { BlogInterface, GET_BLOGS } from '../queries/getBlogs'
 import { useEffect, useState } from 'react';
+import LoadingPosts from '../components/loading/LoadingPosts';
 
 const PostSection = () => {
 
@@ -13,7 +14,7 @@ const PostSection = () => {
 
     if (error) return; 
 
-    if (loading) return;
+    if (loading) return <LoadingPosts/>;
 
     return (
         <section className='w-full min-h-screen grid grid-cols-1  flex-col '>
